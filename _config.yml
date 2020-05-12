@@ -1,1 +1,15 @@
+title: WORSICA
+logo: /assets/img/logo_worsica_novo_v5.png
+description: > # this means to ignore newlines until "show_downloads:"
+  Water mOnitoRing SentInel Cloud platform.
+show_downloads: false
+google_analytics:
 theme: jekyll-theme-minimal
+url: https://WORSICA.github.io
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+exclude:
+- .gitignore
+- .jekyll-cache
+- README.md
