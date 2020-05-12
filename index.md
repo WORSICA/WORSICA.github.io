@@ -8,3 +8,5 @@ layout: default
 - [Portal](./worsica-portal/)
 - [Processing](./worsica-processing/)
 - [CLI](./docs/cli.html)
+- [CICD](./worsica-cicd/)
+
