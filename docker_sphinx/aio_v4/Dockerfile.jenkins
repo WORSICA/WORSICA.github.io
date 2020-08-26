@@ -5,12 +5,14 @@ MAINTAINER Ricardo Martins <rjmartins@lnec.pt>
 ENV SPHINX_VERSION 3.2.1
 ENV SPHINX_RTD_THEME_VERSION 0.5.0
 ENV SPHINX_RECOMMONMARK_VERSION 0.6.0
+ENV SPHINX_VERSIONING_VERSION 2.2.1
 
 #build manually requirements file instead of importing it from the host or from git repository.
 RUN cd $HOME \
     && echo -e " \
         sphinx==${SPHINX_VERSION} \n\
-        sphinx-rtd-theme==${SPHINX_RTD_THEME_VERSION} \n\ 
+        sphinx-rtd-theme==${SPHINX_RTD_THEME_VERSION} \n\
+	sphinxcontrib-versioning==${SPHINX_VERSIONING_VERSION} \n\
         recommonmark==${SPHINX_RECOMMONMARK_VERSION}" >> requirements-sphinx-pip.txt \
     && $HOME/worsica_web-py363_venv/bin/pip3 install --no-cache-dir -r requirements-sphinx-pip.txt \
     && mkdir WORSICA.github.io
