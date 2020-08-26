@@ -37,7 +37,7 @@ from recommonmark.transform import AutoStructify
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark','sphinx.ext.autosectionlabel',]
+extensions = ['recommonmark','sphinx.ext.autosectionlabel','sphinx.ext.githubpages']
 autosectionlabel_prefix_document = True
 github_doc_root = 'https://github.com/WORSICA/WORSICA.github.io/tree/master/docs/'
 

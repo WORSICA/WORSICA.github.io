@@ -45,6 +45,14 @@ help:
 	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+github:
+	@echo "Start building html..."
+	@make html
+	@echo "Cleanup doc files from previous build"
+	@rm -rf ./docs/*
+	@echo "Copy new built files to docs"
+	@cp -a build/html/. ./docs
+	@echo "Success!"
 
 clean:
 	rm -rf $(BUILDDIR)/*
