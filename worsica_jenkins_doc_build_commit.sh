@@ -8,9 +8,9 @@ echo "2- Change to gh-pages and copy outputs to the root folder"
 git checkout gh-pages
 cp -r ${WORSICADOC_WORKDIR}/html/* ${WORSICADOC_WORKDIR}/
 cp ${WORSICADOC_WORKDIR}/html/.git_credential_helper.sh ${WORSICADOC_WORKDIR}/
+chmod a+x ${WORSICADOC_WORKDIR}/.git_credential_helper.sh
 rm -rf ${WORSICADOC_WORKDIR}/html
 echo "3- Commit changes to gh-pages"
-echo ".git_credential_helper.sh" > ${WORSICADOC_WORKDIR}/.gitignore
 git -C ${WORSICADOC_WORKDIR} add -A
 git -C ${WORSICADOC_WORKDIR} reset -- .git_credential_helper.sh
 git config --global user.email 'rjmartins@lnec.pt'
