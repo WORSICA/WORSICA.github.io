@@ -65,7 +65,7 @@ html:
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 	
 multiversion:
-	@worsica_jenkins_doc_build_commit.sh
+	@./worsica_jenkins_doc_build_commit.sh
 	@echo
 	@echo "Multiversion build finished. The HTML pages are in $(BUILDDIR)/html."
 
