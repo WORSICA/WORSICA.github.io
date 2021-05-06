@@ -359,8 +359,8 @@ texinfo_documents = [
 smv_tag_whitelist = r'^.*$'                   # Include all tags
 #smv_tag_whitelist = r'^v\d+\.\d+$'            # Include tags like "v2.1"
 
-smv_branch_whitelist = r'^.*$'                # Include all branches
-#smv_branch_whitelist = r'^(?!master).*$'      # Include all branches except "master"
+#smv_branch_whitelist = r'^.*$'                # Include all branches
+smv_branch_whitelist = r'^(?!master).*$'      # Include all branches except "master"
 
 #smv_remote_whitelist = None                   # Only use local branches
 smv_remote_whitelist = r'^.*$'                # Use branches from all remotes
