@@ -9,8 +9,7 @@ This documentation is aimed to help actual and future WORSICA maintainers to ass
 Contents
 =============================================
 
-* [Frontend (Portal)](portal_index.md)
-* [Intermediate](intermediate_index.md)
+* [Portal](portal_index.md)
 * [Processing](processing_index.md)
 
 
