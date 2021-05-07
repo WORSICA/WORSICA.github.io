@@ -7,7 +7,7 @@ git checkout ${DEFAULT_BRANCH}
 sphinx-multiversion -c ${WORSICADOC_WORKDIR}/source ${WORSICADOC_WORKDIR}/source ${WORSICADOC_WORKDIR}/html
 cp ${WORSICADOC_WORKDIR}/.git_credential_helper.sh ${WORSICADOC_WORKDIR}/html/
 mkdir ${WORSICADOC_WORKDIR}/html/assets
-echo '<!DOCTYPE html><html><head><title>Redirecting to ${DEFAULT_BRANCH} branch</title><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=./${DEFAULT_BRANCH}/index.html"><link rel="canonical" href="https://worsica.github.io/${DEFAULT_BRANCH}/index.html"></head></html>' > ${WORSICADOC_WORKDIR}/html/assets/index.html
+echo "<!DOCTYPE html><html><head><title>Redirecting to ${DEFAULT_BRANCH} branch</title><meta charset='utf-8'><meta http-equiv='refresh' content='0; url=./${DEFAULT_BRANCH}/index.html'><link rel='canonical' href='https://worsica.github.io/${DEFAULT_BRANCH}/index.html'></head></html>" > ${WORSICADOC_WORKDIR}/html/assets/index.html
 
 echo "2- Change to gh-pages and copy outputs to the root folder"
 git checkout gh-pages
