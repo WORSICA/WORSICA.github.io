@@ -18,7 +18,8 @@ RUN cd $HOME \
         sphinx-rtd-theme==${SPHINX_RTD_THEME_VERSION} \n\
 	sphinx-multiversion==${SPHINX_VERSIONING_VERSION} \n\
         recommonmark==${SPHINX_RECOMMONMARK_VERSION}" >> requirements-sphinx-pip.txt \
-    && $HOME/worsica_web-py363_venv/bin/pip3 install --no-cache-dir -r requirements-sphinx-pip.txt \  
+    && $HOME/worsica_web-py363_venv/bin/pip3 install --no-cache-dir -r requirements-sphinx-pip.txt \
+    && git lfs install \ 
     && mkdir WORSICA.github.io 
 
 #set the path enviroment variable and the cwd
