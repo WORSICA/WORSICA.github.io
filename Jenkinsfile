@@ -1,24 +1,22 @@
-@Library(['github.com/indigo-dc/jenkins-pipeline-library@release/2.1.0']) _
-
-def projectConfig
-
 pipeline {
     agent any
 
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+    }
+
     stages {
-        stage('SQA baseline criterion: QC.Doc') {
-            steps {
-                script {
-                    projectConfig = pipelineConfig(
-                        configFile: '.sqa/config.yml',
-                        scmConfigs: [ localBranch: true ]
-                    )
-                    buildStages(projectConfig)
+        stage('Trigger worsica CICD job') {
+            when {
+                anyOf {
+                    branch 'master'
+                    //branch 'development'
                 }
             }
-            post {
-                cleanup {
-                    cleanWs()
+            steps {
+                script {
+                    build job: "/${JOB_NAME}".replace('WORSICA.github.io', 'worsica-cicd'),
+                          propagate: true
                 }
             }
         }
