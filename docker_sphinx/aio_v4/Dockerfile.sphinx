@@ -10,6 +10,7 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 #build manually requirements file instead of importing it from the host or from git repository.
+#todo: install git-lfs
 RUN cd $HOME \
     && yum install -y git unzip \  
     && $HOME/worsica_web-py363_venv/bin/pip3 install --upgrade setuptools \
@@ -19,7 +20,7 @@ RUN cd $HOME \
 	sphinx-multiversion==${SPHINX_VERSIONING_VERSION} \n\
         recommonmark==${SPHINX_RECOMMONMARK_VERSION}" >> requirements-sphinx-pip.txt \
     && $HOME/worsica_web-py363_venv/bin/pip3 install --no-cache-dir -r requirements-sphinx-pip.txt \
-    && git lfs install \   
+    #&& git lfs install \   
     && mkdir WORSICA.github.io 
 
 #set the path enviroment variable and the cwd
